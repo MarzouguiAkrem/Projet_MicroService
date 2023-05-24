@@ -1,0 +1,22 @@
+type Subscriber {
+  id: ID!
+  name: String!
+  subscribedToChannel: String!
+  subscribeDate: String!
+}
+
+input CreateSubscriberInput {
+  name: String!
+  subscribedToChannel: String!
+}
+
+type Query {
+  subscribers: [Subscriber!]!
+  subscriber(id: ID!): Subscriber
+}
+
+type Mutation {
+  createSubscriber(input: CreateSubscriberInput!): Subscriber!
+  updateSubscriber(id: ID!, input: CreateSubscriberInput!): Subscriber!
+  deleteSubscriber(id: ID!): Subscriber!
+}

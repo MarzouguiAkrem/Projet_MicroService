@@ -1,0 +1,7 @@
+schema: 'subscriber.graphql'
+generates:
+  path/to/generated/subscribers.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
